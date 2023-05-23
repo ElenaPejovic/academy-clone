@@ -13,10 +13,16 @@ const styles = {
                 // light mode value retrieved from theme
                 props.theme.semanticTokens.colors['chakra-body-bg']._light,
                 // your custom value for dark mode
-                '#000',
+                '#000 url() no-repeat fixed center',
               )(props),
         }
     })
 }
 
-export default extendTheme({config, styles});
+const borderRadius = {
+    radii: {
+        md: '0.375rem',
+    },
+}
+
+export default extendTheme({config, styles, borderRadius});

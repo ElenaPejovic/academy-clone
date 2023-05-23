@@ -1,4 +1,4 @@
-import { FormControl, FormLabel, Heading, VStack, Input, Button } from "@chakra-ui/react";
+import { FormControl, FormLabel, Heading, VStack, Input, Button, Flex } from "@chakra-ui/react";
 import { useFormik } from "formik";
 
 function Login() {
@@ -30,8 +30,10 @@ function Login() {
             <FormLabel>Password</FormLabel>
             <Input name="password" placeholder="Enter Password"  onChange={formik.handleChange} value={formik.values.password}/>
         </FormControl>
-
+        <Flex>
         <Button type="submit" variant="outline" colorScheme="green"> Log in</Button>
+        <Button type="submit" variant="ghost" colorScheme="gray">Create Account</Button>
+        </Flex>
     </VStack>
   )
 }
